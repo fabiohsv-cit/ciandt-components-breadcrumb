@@ -34,12 +34,12 @@ Breadcrumb component written in angularjs.
    <app-breadcrumb templateUrl="app/common/components/breadcrumb/breadcrumb.html"></app-breadcrumb>
    ```
 
-3. **Registry your rote navegation words**
-   -Every route change success this directive update the variable $rootScope.appContext.breadcrumb, adding a array with all rote navegation words. Theses words should be setted on angular-route component.
+3. **Registry your route navegation words**
+   -Every route change success this directive update the variable $rootScope.appContext.breadcrumb, adding a array with all route navegation words. Theses words should be setted on angular-route component.
 
    ```html
    $routeProviderReference
-      .when('/' + feature.urlPath, {
+      .when('/yourRoute', {
          breadcrumb: ['System', 'Module', 'Feature'],
          templateUrl: 'yourPage.html',
          controller: 'yourController'
