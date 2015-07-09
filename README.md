@@ -5,7 +5,7 @@ Breadcrumb component written in angularjs.
 
 * Install the dependency:
 
-   ```javascript
+   ```shell
    bower install ciandt-components-breadcrumb --save
    ```
 * Add breadcrumb.js to your code:
@@ -35,9 +35,9 @@ Breadcrumb component written in angularjs.
    ```
 
 3. **Registry your route navegation words**
-   -Every route change success this directive update the variable $rootScope.appContext.breadcrumb, adding a array with all route navegation words. Theses words should be setted on angular-route component.
+   - *Every route change success this directive update the variable $rootScope.appContext.breadcrumb, adding a array with all route navegation words. Theses words should be setted on angular-route component.
 
-   ```html
+   ```javascript
    $routeProviderReference
       .when('/yourRoute', {
          breadcrumb: ['System', 'Module', 'Feature'],
