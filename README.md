@@ -35,7 +35,7 @@ Breadcrumb component written in angularjs.
    ```
 
 3. **Registry your route navegation words**
-   - *Every route change success this directive update the variable $rootScope.appContext.breadcrumb, adding a array with all route navegation words. Theses words should be setted on angular-route component.
+   - Every route change success this directive update the variable $rootScope.appContext.breadcrumb, adding a array with all route navegation words. Theses words should be setted on angular-route component.
 
    ```javascript
    $routeProviderReference
