@@ -6,7 +6,7 @@
     "Fábio Henrique da Silva Viana <fabiohsv@ciandt.com>"
   ],
   "description": "Breadcrumb component",
-  "main": "breadcrumb.js",
+  "main": ["breadcrumb.js", "breadcrumb.html"],
   "moduleType": [
     "globals"
   ],

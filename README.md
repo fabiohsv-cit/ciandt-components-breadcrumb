@@ -33,12 +33,12 @@ Breadcrumb component written in angularjs.
    ```html
    <app-breadcrumb templateUrl="app/common/components/breadcrumb/breadcrumb.html"></app-breadcrumb>
    ```
-
+   - default template is stored in ciandt-components-breadcrumb/breadcrumb.html
 3. **Registry your route navegation words**
    - Every route change success this directive update the variable $rootScope.appContext.breadcrumb, adding a array with all route navegation words. Theses words should be setted on angular-route component.
 
    ```javascript
-   $routeProviderReference
+   $routeProvider
       .when('/yourRoute', {
          breadcrumb: ['System', 'Module', 'Feature'],
          templateUrl: 'yourPage.html',
