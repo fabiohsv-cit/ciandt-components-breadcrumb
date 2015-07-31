@@ -1,4 +1,4 @@
-# ciandt-components-breadcrumb
+# ng-jedi-breadcrumb
 Breadcrumb component written in angularjs.
 
 ### Install
@@ -6,18 +6,18 @@ Breadcrumb component written in angularjs.
 * Install the dependency:
 
    ```shell
-   bower install ciandt-components-breadcrumb --save
+   bower install ng-jedi-breadcrumb --save
    ```
 * Add breadcrumb.js to your code:
 
    ```html
-   <script src='assets/libs/ciandt-components-breadcrumb/breadcrumb.js'></script>
+   <script src='assets/libs/ng-jedi-breadcrumb/breadcrumb.js'></script>
    ```
    - note that the base directory used was assets/libs, you should change bower_components to assets/libs or move from bower_components to assets/libs with grunt.
 * Include module dependency:
 
    ```javascript
-   angular.module('yourApp', ['ciandt.components.breadcrumb']);
+   angular.module('yourApp', ['ng.jedi.breadcrumb']);
    ```
 ======
 
@@ -33,7 +33,7 @@ Breadcrumb component written in angularjs.
    ```html
    <app-breadcrumb templateUrl="app/common/components/breadcrumb/breadcrumb.html"></app-breadcrumb>
    ```
-   - the default template is stored in ciandt-components-breadcrumb/breadcrumb.html
+   - the default template is stored in ng-jedi-breadcrumb/breadcrumb.html
 3. **Register your route navigation words**
    - On every route change success, this directive updates the variable $rootScope.appContext.breadcrumb, adding to an array with all route navigation words. Theses words should be setted on angular-route component.
 

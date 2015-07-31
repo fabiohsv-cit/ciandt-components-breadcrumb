@@ -1,11 +1,11 @@
 {
-  "name": "ciandt-components-breadcrumb",
+  "name": "ng-jedi-breadcrumb",
   "version": "0.0.1",
-  "homepage": "https://github.com/fabiohsv-cit/ciandt-components-breadcrumb",
+  "homepage": "https://github.com/ng-jedi/breadcrumb",
   "authors": [
-    "Fábio Henrique da Silva Viana <fabiohsv@ciandt.com>"
+    "Fábio Henrique da Silva Viana <fabioviana.bh@gmail.com>"
   ],
-  "description": "Breadcrumb component",
+  "description": "Breadcrumb component written in angularjs",
   "main": ["breadcrumb.js", "breadcrumb.html"],
   "moduleType": [
     "globals"

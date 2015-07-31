@@ -2,9 +2,9 @@
 
 define(['angular'], function () {
 
-    angular.module('ciandt.components.breadcrumb', []).constant('ciandt.components.breadcrumb.BreadcrumbConfig', {
+    angular.module('ng.jedi.breadcrumb', []).constant('ng.jedi.breadcrumb.BreadcrumbConfig', {
         homeTitle: 'Principal'
-    }).directive("appBreadcrumb", ['ciandt.components.breadcrumb.BreadcrumbConfig', function (BreadcrumbConfig) {
+    }).directive("appBreadcrumb", ['ng.jedi.breadcrumb.BreadcrumbConfig', function (BreadcrumbConfig) {
         return {
             restrict: 'E',
             link: function (scope) {
@@ -20,7 +20,7 @@ define(['angular'], function () {
                 if (attrs.templateUrl) {
                     return attrs.templateUrl;
                 } else {
-                    return "assets/libs/ciandt-components-breadcrumb/breadcrumb.html";
+                    return "assets/libs/ng-jedi-breadcrumb/breadcrumb.html";
                 }
             }
         };
