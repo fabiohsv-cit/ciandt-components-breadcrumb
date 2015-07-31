@@ -2,9 +2,9 @@
 
 define(['angular'], function () {
 
-    angular.module('ng.jedi.breadcrumb', []).constant('ng.jedi.breadcrumb.BreadcrumbConfig', {
+    angular.module('jedi.breadcrumb', []).constant('jedi.breadcrumb.BreadcrumbConfig', {
         homeTitle: 'Principal'
-    }).directive("appBreadcrumb", ['ng.jedi.breadcrumb.BreadcrumbConfig', function (BreadcrumbConfig) {
+    }).directive("jdBreadcrumb", ['jedi.breadcrumb.BreadcrumbConfig', function (BreadcrumbConfig) {
         return {
             restrict: 'E',
             link: function (scope) {

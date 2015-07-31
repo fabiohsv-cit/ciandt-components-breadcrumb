@@ -17,23 +17,23 @@ Breadcrumb component written in angularjs.
 * Include module dependency:
 
    ```javascript
-   angular.module('yourApp', ['ng.jedi.breadcrumb']);
+   angular.module('yourApp', ['jedi.breadcrumb']);
    ```
 ======
 
 ### How To Use
 
-1. **Add app-breadcrumb directive in your html**
+1. **Add jd-breadcrumb directive in your html**
 
    ```html
-   <app-breadcrumb></app-breadcrumb>
+   <jd-breadcrumb></jd-breadcrumb>
    ```
 2. **If necessary, to customize the default template, use the templateUrl attribute to do this**
 
    ```html
-   <app-breadcrumb templateUrl="app/common/components/breadcrumb/breadcrumb.html"></app-breadcrumb>
+   <jd-breadcrumb templateUrl="app/common/components/breadcrumb/breadcrumb.html"></jd-breadcrumb>
    ```
-   - the default template is stored in ng-jedi-breadcrumb/breadcrumb.html
+   - the default template is stored in bower_components/ng-jedi-breadcrumb/breadcrumb.html
 3. **Register your route navigation words**
    - On every route change success, this directive updates the variable $rootScope.appContext.breadcrumb, adding to an array with all route navigation words. Theses words should be setted on angular-route component.
 
