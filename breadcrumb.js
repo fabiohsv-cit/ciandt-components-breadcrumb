@@ -24,7 +24,7 @@ define(['angular'], function () {
                 }
             }
         };
-    }]).run(['$rootScope', '$location', function ($rootScope, $location) {
+    }]).run(['$rootScope', '$location', 'jedi.breadcrumb.BreadcrumbConfig', function ($rootScope, $location, BreadcrumbConfig) {
         // atualiza breadcrumb após evento de mudança de rota
         $rootScope.$on('$routeChangeSuccess', function (ev, next, last) {
             if (next && next.$$route) {
@@ -39,6 +39,8 @@ define(['angular'], function () {
                 // limpa querystring após mudança de rota, pra não ficar com lixo na url durante navegação
                 // utilizar injeção de $routeParams para obter parametros do querystring
                 $location.$$search = {};
+            } else {
+                $rootScope.appContext.breadcrumb = [BreadcrumbConfig.homeTitle];
             }
         });
     }]);
