@@ -2,12 +2,15 @@
 
 define(['angular'], function () {
 
+    var cancelListenerEvt;
+
     angular.module('jedi.breadcrumb', []).constant('jedi.breadcrumb.BreadcrumbConfig', {
         homeTitle: 'Principal'
     }).directive("jdBreadcrumb", ['jedi.breadcrumb.BreadcrumbConfig', function (BreadcrumbConfig) {
         return {
             restrict: 'E',
-            link: function (scope) {
+            replace: true,
+            link: function (scope, element) {
                 // inicializa breadcrumb como página principal
                 if (!scope.$root.appContext) {
                     scope.$root.appContext = {};
@@ -15,6 +18,19 @@ define(['angular'], function () {
                 if (!scope.$root.appContext.breadcrumb) {
                     scope.$root.appContext.breadcrumb = [BreadcrumbConfig.homeTitle];
                 }
+
+                scope.$on('$destroy', function () {
+                    if (cancelListenerEvt) {
+                        cancelListenerEvt();
+                        cancelListenerEvt = null;
+                    }
+                });
+                element.on('$destroy', function () {
+                    if (cancelListenerEvt) {
+                        cancelListenerEvt();
+                        cancelListenerEvt = null;
+                    }
+                });
             },
             templateUrl: function (elem, attrs) {
                 if (attrs.templateUrl) {
@@ -26,7 +42,7 @@ define(['angular'], function () {
         };
     }]).run(['$rootScope', '$location', 'jedi.breadcrumb.BreadcrumbConfig', function ($rootScope, $location, BreadcrumbConfig) {
         // atualiza breadcrumb após evento de mudança de rota
-        $rootScope.$on('$routeChangeSuccess', function (ev, next, last) {
+        cancelListenerEvt = $rootScope.$on('$routeChangeSuccess', function (ev, next, last) {
             if (next && next.$$route) {
                 // atribui breadcrumb da página que a navegação está direcionando
                 if (next.$$route.breadcrumb) {
