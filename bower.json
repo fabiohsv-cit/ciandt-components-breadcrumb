@@ -6,7 +6,7 @@
     "Fábio Henrique da Silva Viana <fabioviana.bh@gmail.com>"
   ],
   "description": "Breadcrumb component written in angularjs",
-  "main": ["breadcrumb.js", "breadcrumb.html"],
+  "main": ["breadcrumb.js"],
   "moduleType": [
     "globals"
   ],
