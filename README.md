@@ -1,4 +1,4 @@
-# ng-jedi-breadcrumb
+# [ng-jedi-breadcrumb](https://github.com/jediproject/ng-jedi-breadcrumb)
 Breadcrumb component.
 ###### Written in [AngularJs](https://angularjs.org/)
 
