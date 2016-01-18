@@ -5,21 +5,20 @@ Breadcrumb component.
 ### Install
 
 * Install the dependency:
+```shell
+bower install ng-jedi-breadcrumb --save
+```
 
-   ```shell
-   bower install ng-jedi-breadcrumb --save
-   ```
 * Add breadcrumb.js to your code:
+```html
+<script src='assets/libs/ng-jedi-breadcrumb/breadcrumb.js'></script>
+```
 
-   ```html
-   <script src='assets/libs/ng-jedi-breadcrumb/breadcrumb.js'></script>
-   ```
-   - Note that the base directory used was assets/libs, you should change bower_components to assets/libs or move from bower_components to assets/libs with [Grunt](http://gruntjs.com/).
 * Include module dependency:
+```javascript
+angular.module('yourApp', ['jedi.breadcrumb']);
+```
 
-   ```javascript
-   angular.module('yourApp', ['jedi.breadcrumb']);
-   ```
 ======
 
 ### How To Use
