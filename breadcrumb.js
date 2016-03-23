@@ -2,7 +2,7 @@
 
 (function (factory) {
     if (typeof define === 'function') {
-        define(["angular"], factory);
+        define(["angular", 'ng-jedi-layout-impl'], factory);
     } else {
         if (typeof module !== "undefined" && typeof exports !== "undefined" && module.exports === exports){
             module.exports = 'jedi.breadcrumb';
@@ -13,7 +13,7 @@
 
     var cancelListenerEvt;
 
-    angular.module('jedi.breadcrumb', []).constant('jedi.breadcrumb.BreadcrumbConfig', {
+    angular.module('jedi.breadcrumb', ['jedi.layout.impl']).constant('jedi.breadcrumb.BreadcrumbConfig', {
         homeTitle: 'Home'
     }).directive("jdBreadcrumb", ['jedi.breadcrumb.BreadcrumbConfig', function (BreadcrumbConfig) {
         return {
@@ -46,7 +46,7 @@
                 }
             }
         };
-    }]).run(['$rootScope', '$location', 'jedi.breadcrumb.BreadcrumbConfig', '$templateCache', function ($rootScope, $location, BreadcrumbConfig, $templateCache) {
+    }]).run(['$rootScope', '$location', 'jedi.breadcrumb.BreadcrumbConfig', '$templateCache', 'jedi.layout.impl.Breadcrumb', function ($rootScope, $location, BreadcrumbConfig, $templateCache, uiImpl) {
         // atualiza breadcrumb após evento de mudança de rota
         cancelListenerEvt = $rootScope.$on('$routeChangeSuccess', function (ev, next, last) {
             if (next && next.$$route) {
@@ -64,9 +64,7 @@
         });
 
         // template
-        $templateCache.put('assets/libs/ng-jedi-breadcrumb/breadcrumb.html', '<ol class="breadcrumb hidden-xs">'+
-                                                                             '    <li class="active" ng-repeat="item in jdBreadcrumb track by $index + item" jd-i18n>{{item}}</li>'+
-                                                                             '</ol>');
+        $templateCache.put('assets/libs/ng-jedi-breadcrumb/breadcrumb.html', uiImpl.template);
     }]);
 
 }));
