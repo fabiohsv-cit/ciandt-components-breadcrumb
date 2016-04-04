@@ -1,13 +1,4 @@
-;(function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    define(['angular'], factory);
-  } else if (typeof exports === 'object') {
-    module.exports = factory(require('angular'));
-  } else {
-    root.ngJediBreadcrumb = factory(root.angular);
-  }
-}(this, function(angular) {
-'use strict';
+﻿'use strict';
 
 var cancelListenerEvt;
 
@@ -71,5 +62,3 @@ angular.module('jedi.breadcrumb', []).constant('jedi.breadcrumb.BreadcrumbConfig
                                                                           '    <li class="active" ng-repeat="item in jdBreadcrumb track by $index + item" jd-i18n>{{item}}</li>'+
                                                                           '</ol>');
 }]);
-return 'jedi.breadcrumb';
-}));

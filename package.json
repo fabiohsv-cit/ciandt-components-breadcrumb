@@ -9,12 +9,16 @@
   },
   "main": "breadcrumb.js",
   "author": {
-	"name": "Fábio Henrique da Silva Viana",
-	"email": "fabioviana.bh@gmail.com",
-	"url": "http://jediproject.github.io"
+    "name": "Fábio Henrique da Silva Viana",
+    "email": "fabioviana.bh@gmail.com",
+    "url": "http://jediproject.github.io"
   },
   "keywords": [
-	"angular",
-	"breadcrumb"
-  ]
+    "angular",
+    "breadcrumb"
+  ],
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-umd": "^0.2.0"
+  }
 }
